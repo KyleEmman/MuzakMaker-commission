@@ -1,0 +1,333 @@
+html {
+    background-color: #020659;
+    min-height: 100%;
+    height: 100%;
+}
+body {
+    font-family: Optima, sans-serif;
+    color: #ffffff;
+    margin: 0 auto;
+    min-height: 100%;
+    height: 100%;
+}
+.container {
+    max-width: 830px;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
+}
+h1 {
+    font-size: 22px;
+    line-height: 2em;
+}
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2, h3 {
+    font-size: 20px;
+    color: #590242;
+    line-height: 2em;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+.scroll div h3 {
+    transform: translateY(-30px);
+}
+.scroll div dl {
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50px);
+}
+dt, dd {
+    color: #590242;
+    display: inline;
+    margin: 0;
+    font-style: italic;
+}
+
+/* dl {
+    display: flex;
+}
+dt {
+    padding-right: 5px;
+} */
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255,.5);
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background-color: #020659;
+}
+#playlist ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlist ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlist ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlist ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+#trending {
+    background-color: #ffffff;
+}
+#playlist .scroll {
+    background-color: #2699FB;
+}
+#curated .scroll {
+    background-color: #030ABC;
+}
+nav {
+    width: 100%;
+    height: fit-content;
+    background-color: #01148C;
+}
+ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li {
+    flex-grow: 1;
+    display: block;
+}
+li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Optima;
+}
+li:first-of-type {
+    margin-left: 10px;
+}
+#dropdown {
+    display: none;
+}
+[href="#home"] {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 30px;
+}
+header {
+    background-image: linear-gradient(to right, #1C22CE, #000007);
+}
+header h1, header p {
+    margin: 15px 15px 15px 25px;
+}
+header p {
+    display: inline-block;
+}
+header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#trending > h2 {
+    margin: 10px 0 0 30px;
+}
+.more-trending {
+    float: right;
+    background-color: #590242;
+    padding: 5px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.playlists {
+    height: fit-content;
+    display: flex;
+    margin-top: 50px;
+}
+.scroll-playlist {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 500px;
+}
+.scroll-playlist1 {
+    background-color: #2699FB;
+}
+.scroll-playlist2 {
+    background-color: #01148C;
+}
+.scroll-playlist1 section {
+    margin: 15px;
+    background-color: #0F8DFB;
+}
+.scroll-playlist2 section {
+    margin: 15px;
+    background-color: #020E73;
+}
+.scroll-playlist section {
+    display: flex;
+    text-align: center;
+}
+.playlists h2 {
+    margin-left: 30px;
+}
+.playlists img {
+    margin-left: 10px;
+    margin-top: 10px
+}
+.playlists h3 {
+    color: white;
+}
+.playlists button {
+    background-color: #590242;
+    padding: 5px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.copyright {
+    text-align: center;
+    color: #590242;
+    margin-top: 50px;
+    padding: 30px 0;
+}
+.playlist-button {
+    
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        position: absolute;
+        z-index: 10;
+    }
+    header {
+        padding-top: 60px;
+    }
+    ul {
+        background-color: #1E04D2;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height .2s ease-out;
+        flex-direction: column;
+    }
+    li:first-of-type {
+        position: absolute;
+        top: 0;
+        margin-top: 15px;
+    }
+    li {
+        margin-top: 25px;
+    }
+    li:last-of-type {
+        margin-bottom: 25px;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    .playlists {
+        flex-direction: column;
+    }
+    .scroll-playlist {
+        grid-template-columns: repeat(5, 1fr);
+        overflow-y: hidden;
+        overflow-x: auto;
+        height: 380px;
+    }
+    #b1, #b2, #b3 {
+        float: left;
+        margin-left: 25px;
+    }
+    .scroll-playlist section {
+        flex-direction: column;
+    }
+}
